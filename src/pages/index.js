@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import { rhythm } from "../utils/typography"
 
+import kebabCase from "lodash/kebabCase"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
@@ -26,7 +28,20 @@ const BlogIndex = ({ data, location }) => {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>
+                Published: {node.frontmatter.date} /
+                Tags: {
+                  node.frontmatter.tags.map((tag, index) =>
+                    (
+                      <span key={tag}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>
+                          {tag}
+                        </Link>
+                        {index !== node.frontmatter.tags.length - 1 ? ", " : ""}
+                      </span>
+                    ))
+                }
+              </small>
             </header>
             <section>
               <p
@@ -62,6 +77,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }
