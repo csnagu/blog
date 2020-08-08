@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+import kebabCase from "lodash/kebabCase"
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -34,7 +36,18 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            Published: {post.frontmatter.date} /
+            Tags: {
+              post.frontmatter.tags.map((tag, index) =>
+                (
+                  <span key={tag}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>
+                      {tag}
+                    </Link>
+                    {index !== post.frontmatter.tags.length - 1 ? ", " : ""}
+                  </span>
+                ))
+            }
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -95,6 +108,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
