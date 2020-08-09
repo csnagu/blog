@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+date: "2015-05-01"
 image: ./salty_egg.jpg
 tags: ["hoge","fuga", "helloworld"]
 description: "Hello World"
@@ -92,4 +92,4 @@ module.exports = getTsundokuNum;
 ```
 
 image
-![Chinese Salty Egg](../../assets/avatar.jpg)
+![Alt Text](../../assets/avatar.jpg "this is caption")
