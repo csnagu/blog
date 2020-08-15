@@ -3,9 +3,9 @@ module.exports = {
     title: `nagu blog`,
     author: {
       name: `nagu`,
-      summary: `φ(..) memo `,
+      summary: `都内某所で開発・運用をしているエンジニア。技術関連でやってみたことや理解したことをまとめます。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `エンジニアが技術関連でやってみたことや理解したことをまとめるブログ。`,
     siteUrl: `https://blog.nagu.dev/`,
     social: {
       twitter: `cs_nagu`,
@@ -36,6 +36,7 @@ module.exports = {
               maxWidth: 590,
               showCaptions: true,
               markdownCaptions: true,
+              wrapperStyle: `.gatsby-resp-image-figcaption{ text-align: center; }`
             },
           },
           {
@@ -55,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-17765726-16`,
       },
     },
     `gatsby-plugin-feed`,
@@ -68,7 +69,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/avatar.jpg`,
       },
     },
     `gatsby-plugin-react-helmet`,
