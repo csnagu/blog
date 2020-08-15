@@ -2,4 +2,5 @@
   blog built with gatsby
 </h1>
 
-なんか書く
+https://blog.nagu.dev/
+
