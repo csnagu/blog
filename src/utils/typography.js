@@ -1,6 +1,42 @@
 import Typography from "typography"
 import githubTheme from "typography-theme-github"
 
+githubTheme.baseFontSize = "15px"
+githubTheme.headerFontFamily = [
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "Roboto",
+  "Hiragino Sans",
+  "Noto Sans CJK JP",
+  "Original Yu Gothic",
+  "Yu Gothic",
+  "sans-serif",
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Sans Emoji"
+]
+githubTheme.bodyFontFamily = [
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "Segoe UI",
+  "Roboto",
+  "Hiragino Sans",
+  "Noto Sans CJK JP",
+  "Original Yu Gothic",
+  "Yu Gothic",
+  "sans-serif",
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Sans Emoji"
+]
+githubTheme.overrideThemeStyles = ({ rhythm }) => ({
+  'a': {
+    color: "#39AB8D",
+  },
+})
 
 const typography = new Typography(githubTheme)
 
