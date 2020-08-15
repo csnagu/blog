@@ -36,7 +36,6 @@ module.exports = {
               maxWidth: 590,
               showCaptions: true,
               markdownCaptions: true,
-              wrapperStyle: `.gatsby-resp-image-figcaption{ text-align: center; }`
             },
           },
           {
