@@ -30,15 +30,23 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // 'gatsby-remark-prismjs-title',
           'gatsby-remark-code-titles',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images-anywhere`,
             options: {
-              maxWidth: 590,
-              showCaptions: true,
-              markdownCaptions: true,
-            },
+              staticDir: 'static',
+              createMarkup: ({ title, src, srcSet, alt, sizes, presentationWidth }, { loading }) => `
+                <figure class="gatsby-resp-image-figure">
+                  <span class="gatsby-resp-image-wrapper" style="display: block; margin-left: auto; margin-right: auto; max-width: ${presentationWidth}px ">
+                    <img class="gatsby-resp-image-figcaption" loading="${loading}" alt="${alt}" title="${title}" src="${src}" srcSet="${srcSet}" sizes="${sizes}" style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; top: 0px; left: 0px; opacity: 1; transition: opacity 0.5s ease 0s; color: inherit;"/>
+                  </span>
+                  <figcaption class="gatsby-resp-image-figcaption"><p>${title}</p></figcaption>
+                </figure>
+              `,
+              loading: 'lazy',
+              sharpMethod: 'fluid',
+              maxWidth: 560,
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
