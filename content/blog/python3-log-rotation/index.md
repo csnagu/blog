@@ -15,7 +15,7 @@ description: python3のloggingモジュールを使ってサイズ・時間別�
 
 ファイルサイズベースのときは `RotatingFileHandler` 、時間ベースのときは `TimedRotatingFileHandler` を使用する。
 
-```python
+```python:title=make_logs.py
 import logging
 import logging.handlers
 import time
@@ -55,7 +55,7 @@ while True:
 
 <details><summary>出力例</summary>
 
-```bash
+```
 # サイズベース
 $ python make_logs.py
 $ ls -l /tmp/
@@ -66,7 +66,7 @@ total 24
 ...
 ```
 
-```bash
+```
 # 時間ベース
 $ python make_logs.py
 $ ls -l /tmp/
@@ -83,7 +83,7 @@ total 24
 
 普段はDEBUGレベルのログまで出しているとリソースがもったいないので、通常はINFOレベルまでのログを出力し `--debug` 引数があるときにdebugレベルまでログを表示するときはこんな感じに書いた。  
 
-```python
+```python:title=make_logs.py
 import argparse
 import logging
 import logging.handlers
@@ -117,7 +117,7 @@ logger.debug('debug')
 
 <details><summary>出力例</summary>
 
-```bash
+```
 $ python make_logs.py
 $ cat /tmp/app.log
 2020-08-15 14:30:47,526 [make_logs.py:23] CRITICAL critical
@@ -126,7 +126,7 @@ $ cat /tmp/app.log
 2020-08-15 14:30:47,526 [make_logs.py:26] INFO     info
 ```
 
-```bash
+```
 $ python make_logs.py --debug
 $ cat /tmp/app.log
 2020-08-15 14:31:29,198 [make_logs.py:23] CRITICAL critical

@@ -25,7 +25,8 @@
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-remark": "^2.8.28",
     "gatsby-transformer-sharp": "^2.5.13",
-    "npm": "^6.14.7",
+    "npm": "^6.14.8",
+    "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -38,6 +39,7 @@
     "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
+    "gatsby-remark-code-titles": "^1.1.0",
     "prettier": "2.0.5"
   },
   "homepage": "https://github.com/csnagu/blog#readme",
