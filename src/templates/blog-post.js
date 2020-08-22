@@ -50,6 +50,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }
           </p>
         </header>
+        <section className="table-of-contents" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -109,7 +110,16 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
-      }
-    }
-  }
+        image {
+          childImageSharp {
+            fluid(maxWidth: 560) {
+              originalName,
+              src,
+            },
+          },
+        },
+      },
+      tableOfContents
+    },
+  },
 `
