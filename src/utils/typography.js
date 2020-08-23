@@ -32,9 +32,12 @@ githubTheme.bodyFontFamily = [
   "Segoe UI Symbol",
   "Noto Sans Emoji"
 ]
-githubTheme.overrideThemeStyles = ({ rhythm }) => ({
+githubTheme.overrideStyles = () => ({
   'a': {
     color: "#39AB8D",
+  },
+  'td,th': {
+    textAlign: null,
   },
 })
 
