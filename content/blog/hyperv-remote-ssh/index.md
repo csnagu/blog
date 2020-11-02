@@ -1,7 +1,7 @@
 ---
 title: MacからHyper-Vで作成したリモートの仮想マシンにSSH接続する
 date: "2020-07-11"
-tags: ["hyper-v", "ssh"]
+tags: ["hyper-v", "tech"]
 description: "MacからHyper-Vで作成したリモートの仮想マシンにSSH接続する"
 ---
 
@@ -76,17 +76,17 @@ Mac の公開鍵をゲスト OS へ転送する。
 
 ```bash
 Host fumidai
-	HostName 192.168.0.1
-	User <windowsのユーザ名>
-	IdentityFile ~/.ssh/id_rsa
+ HostName 192.168.0.1
+ User <windowsのユーザ名>
+ IdentityFile ~/.ssh/id_rsa
 
 Host centos8
-	HostName 172.168.0.1
-	User <ゲストOSのユーザ名>
-	ProxyCommand ssh -W %h:%p fumidai
+ HostName 172.168.0.1
+ User <ゲストOSのユーザ名>
+ ProxyCommand ssh -W %h:%p fumidai
 ```
 
-`$ ssh centos8 `で接続できれば OK。
+`$ ssh centos8`で接続できれば OK。
 
 ## 雑感
 

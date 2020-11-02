@@ -2,22 +2,31 @@
 title: Hello World
 date: "2015-05-01"
 image: ./salty_egg.jpg
-tags: ["hoge","fuga", "helloworld"]
+tags: ["helloworld"]
 description: "Hello World"
 ---
 
 # H1
+
 hoge
+
 ## H2
+
 fuga
+
 ### H3
+
 piyo
+
 #### H4
+
 waro
+
 ##### H5
+
 sori
 
-,./<>?"':;{}[]-=+_|!@#$%^&*\  
+,./<>?"':;{}[]-=+\_|!@#\$%^&\*\  
 abcdefghijklmnopqrstuvwxyz  
 ABCDEFGHIJKLMNOPQRSTUVWXYZ  
 あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわおん  
@@ -26,43 +35,47 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ０１２３４５６７８９  
 0123456789
 
-*Italic*  
+_Italic_  
 **strong**  
-***Italic Strong***  
+**_Italic Strong_**  
 ~~取り消し線~~
 
 :+1
 
 Links
+
 - [salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
-- https://en.wikipedia.org/wiki/Salted_duck_egg
+- <https://en.wikipedia.org/wiki/Salted_duck_egg>
 
 引用
+
 > hoge  
 > fuga
 
 List
 Unordered
+
 - アイテム
 - item
-    - nest item
-        - 更にネスト
+  - nest item
+    - 更にネスト
 
 Ordered
+
 1. age
 2. sage
 
 Task List
+
 - [ ] unmarked
 - [x] marked
 
-
 Table
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+| First Header                | Second Header                |
+| --------------------------- | ---------------------------- |
+| Content from cell 1         | Content from cell 2          |
+| Content in the first column | Content in the second column |
 
 text `インラインコード` hoge
 

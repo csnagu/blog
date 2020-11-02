@@ -1,7 +1,7 @@
 ---
 title: 市販のルータを買ってSoftbank光の月額課金額を減らした
 date: "2020-10-17"
-tags: ["ガジェット"]
+tags: ["買った", "journal"]
 description: TP-LinkのArcher A10を使ってSoftbank光の月額課金額を減らした話
 ---
 

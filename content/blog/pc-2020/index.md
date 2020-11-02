@@ -1,7 +1,7 @@
 ---
 title: 2020年のPC環境
 date: "2020-09-23"
-tags: ["pc", "買ったもの", "memo"]
+tags: ["買った", "journal"]
 description: 2020/09時点でのPC環境をまとめる
 ---
 
